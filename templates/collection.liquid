@@ -1,0 +1,13 @@
+<section id="products">
+  <div class="inner">
+    {% comment %} // filter goes here {% endcomment %}
+    <div class="products">
+      {% for product in collections.all.products %}
+          {% 
+            render 'product',
+            product: product
+          %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

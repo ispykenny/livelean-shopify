@@ -6,7 +6,9 @@
           On Sale!
         </div>
     {% endif %}
-    <img src="{{product.featured_image | img_url: '300x300', crop: 'center'}}" alt="Product alt"/>
+    <img 
+      src="{{product.featured_image | img_url: '300x300', crop: 'center'}}" 
+      alt="thumbnail of {{product.title}}"/>
   </a>
   <div class="products__content">
     <p class="products__title">{{product.title}}</p>
@@ -23,7 +25,7 @@
           {{product.price | money}}
         </p>    
       </div>
-      <a href="{{product.url}}">Add To Cart</a>
+      <a href="{{product.url}}">View Product</a>
     </div>
   </div>
 </div>

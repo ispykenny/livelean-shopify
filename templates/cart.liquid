@@ -1,0 +1,10 @@
+<section class="default">
+  <div class="inner">
+    {% for cart in cart.items %}
+      {{cart.title}}
+      <a class="remove-item" href="/cart/change?line={{ forloop.index }}&quantity=0">Remove</a>
+    {% endfor %}
+    <h3>Cart Total</h3>
+    {{cart.total_price | money }}
+  </div>
+</section>
