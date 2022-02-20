@@ -46,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {\n  console.log('we heres')\n  const menu_trigger = document.querySelector('.menu');\n  const header = document.querySelector('header');\n  menu_trigger.addEventListener('click', () => header.classList.toggle('nav-showing'))\n}\n\n//# sourceURL=webpack://liveleanrx_shopify/./src/nav.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {\n  const menu_trigger = document.querySelector('.menu');\n  const header = document.querySelector('header');\n  menu_trigger.addEventListener('click', () => header.classList.toggle('nav-showing'))\n}\n\n//# sourceURL=webpack://liveleanrx_shopify/./src/nav.js?");
 
 /***/ })
 
