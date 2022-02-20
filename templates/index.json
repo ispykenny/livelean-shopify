@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "hero_title": "Live Lean Rx <br>The Shop.",
+        "hero_text": "Shop all things Live Lean RX.",
+        "hero_image": "shopify:\/\/shop_images\/alexander-redl-d3bYmnZ0ank-unsplash.jpg"
+      }
+    },
+    "products": {
+      "type": "products",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "products"
+  ]
+}

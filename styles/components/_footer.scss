@@ -1,0 +1,42 @@
+footer { 
+  border-top: 1px solid #eee; 
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-image: url('https://cdn.shopify.com/s/files/1/0628/3535/9978/files/alexander-redl-d3bYmnZ0ank-unsplash.jpg?v=1645288925');
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(black, 0.8);
+  }
+}
+.footer {
+  padding: 3em 0em;
+  position: relative;
+  z-index: 5;
+
+  &__logo {
+    display: inline-block;
+    max-width: 120px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  p {
+    color: #fff;
+  }
+}
+
+
+@media(min-width: $bp-md) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

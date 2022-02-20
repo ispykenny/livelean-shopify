@@ -1,0 +1,19 @@
+.filter {
+
+  > div:first-of-type {
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+@media(min-width: $bp-md) {
+  .filter {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  
+    > div:first-of-type {
+      margin-bottom: 0px;
+    }
+  } 
+}

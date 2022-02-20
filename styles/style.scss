@@ -1,0 +1,19 @@
+@import './utils/';
+@import './components/index';
+@import './elements/cta';
+
+body {
+  margin: 0;
+}
+html, body {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+
+.sr-only {
+  @include kota-screen-reader();
+}

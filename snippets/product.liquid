@@ -1,0 +1,29 @@
+
+<div class="products__item">
+  <a href="{{product.url}}" class="products__img">
+    {% if product.compare_at_price %}
+      <div class="sale-banner">
+          On Sale!
+        </div>
+    {% endif %}
+    <img src="{{product.featured_image | img_url: '300x300', crop: 'center'}}" alt="Product alt"/>
+  </a>
+  <div class="products__content">
+    <p class="products__title">{{product.title}}</p>
+    <div class="products__info">
+      <div class="products__pricing">
+        {% if product.compare_at_price %}
+          <p class="products__price sale-old">
+            <strike>
+              {{product.compare_at_price | money }}
+            </strike>
+          </p>
+        {% endif %}
+        <p class="products__price">
+          {{product.price | money}}
+        </p>    
+      </div>
+      <a href="{{product.url}}">Add To Cart</a>
+    </div>
+  </div>
+</div>

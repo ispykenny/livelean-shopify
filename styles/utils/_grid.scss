@@ -1,0 +1,11 @@
+.inner {
+  max-width: 1400px;
+  width: 90%;
+  margin: auto;
+
+  &__narrow {
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+  }
+}

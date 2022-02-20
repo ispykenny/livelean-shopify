@@ -1,0 +1,80 @@
+
+.hero {
+  position: relative;
+  margin: 3em 0em 2em 0em;
+
+  > .inner {
+    position: relative;
+    padding: 8em 0em;
+    overflow: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+    background: $black;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 5;
+    padding: 0em 2em;
+    color: white;
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 0em;
+    }
+  }
+
+  .cta {
+    margin-top: 2em;
+  }
+}
+
+.background {
+  background-size: cover;
+  background-position: center;
+  @include kota-fill-parent(rgba(black, 0.75));
+  opacity: 0;
+  transform: scale(1.2);
+}
+
+.active {
+  .background {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 1500ms ease;
+  }
+}
+.flex {
+  width: 50%;
+  height: 600px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  max-width: 600px;
+  transform: translateY(-50%);
+}
+
+@media(min-width: $bp-md) {
+  .hero__content {
+    h1 {
+      font-size: 38px;
+    }
+  }
+
+  .hero {
+    margin: 4em 0 2em 0em;
+  
+    &__content {
+      padding: 0em 4em;
+    }
+  }
+}
+
+
+@media(min-width: $bp-lg) {
+  .hero__content {
+    h1 {
+      font-size: 42px;
+    }
+  }
+}

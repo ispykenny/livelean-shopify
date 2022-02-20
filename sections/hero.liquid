@@ -1,0 +1,38 @@
+<div class="inner">
+  <div class="hero__content">
+    <h1>{{section.settings.hero_title}}</h1>
+    <p>{{section.settings.hero_text}}</p>
+    <a href="#products" class="cta">Shop Now</a>
+  </div>
+    <div class="background" data-bg="{{section.settings.hero_image | img_url: 'master'  }}">
+  </div>
+  <div class="flex">
+    {% render 'indentifier' %}
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Hero",
+  "tag": "section",
+  "class": "hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Hero Title"
+    },
+    {
+      "type": "text",
+      "id": "hero_text",
+      "label": "Hero Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Background"
+    }
+  ]
+}
+{% endschema %}
