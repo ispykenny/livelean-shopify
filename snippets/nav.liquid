@@ -6,9 +6,17 @@
       </a>
       <nav>
         <ul>
-          <li><a href="" class="active">Home</a></li>
-          <li><a href="">Our Products</a></li>
-          <li><a href="">Their Products</a></li>
+          {% for link in linklists.main-menu.links %}
+            <li>
+              <a 
+                href="{{link.url}}" 
+                class="
+                  {% if link.active %}active{% endif %}"
+                >
+                {{link.title}}
+              </a>
+            </li>
+          {% endfor %}
         </ul>
       </nav>
     </div>
@@ -40,9 +48,17 @@
     <div class="slide-nav__inner">
       <nav>
         <ul>
-          <li><a href="" class="active">Home</a></li>
-          <li><a href="">Our Products</a></li>
-          <li><a href="">Their Products</a></li>
+          {% for link in linklists.main-menu.links %}
+            <li>
+              <a 
+                href="{{link.url}}" 
+                class="
+                  {% if link.active %}active{% endif %}"
+                >
+                {{link.title}}
+              </a>
+            </li>
+          {% endfor %}
         </ul>
       </nav>
     </div>
