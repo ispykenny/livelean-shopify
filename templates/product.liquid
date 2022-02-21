@@ -1,16 +1,63 @@
 <section>
-  <div class="inner">
+  <div class="inner two-col">
     <div>
-      <img src="{{product.featured_image | img_url: 'master'}}" alt="photo of our {{product.title}}" width="50%"/>
+      <div class="main-product-image">
+        <img data-src="{{product.featured_image | img_url: 'master'}}" alt="photo of our {{product.title}}"/>
+      </div>
+      <div class="mini_images">
+        {% for img in product.images %}
+          <div class="mini-product-images">
+            <img data-src="{{ img  | img_url: 'master' }}"/>
+          </div>
+        {% endfor %}
+      </div>
     </div>
     <div>
+      <p class="product-price">
+        Price: {{product.price | money }}
+      </p>
       <h1>{{product.title}}</h1>
+      <div class="product-description">
+        {{product.description}}
+      </div>
       <form method="post" action="/cart/add">
         <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
-        <input min="1" type="number" id="quantity" name="quantity" value="1"/>
-        <input type="submit" value="Add to cart" class="btn" />
+          <div class="select">
+            <select name="id" id="ProductSelect-{{ section.id }}" class="product-form__variants">
+              {% for variant in product.variants %}
+                {% if variant.available %}
+                  <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}" data-price="{{variant.price | money }}">
+                    {{ variant.title }} | {{variant.price | money }}
+                  </option>
+                {% else %}
+                  <option disabled="disabled">{{ variant.title }}</option>
+                {% endif %}
+              {% endfor %}
+            </select> 
+            <div class="select-triangle">
+              <div class="triangle"></div>
+            </div> 
+          </div>
+        <label for="quantity">Quantity</label>
+        <div class="select">
+          <select id="quantity" name="quantity" >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+          <div class="select-triangle">
+            <div class="triangle"></div>
+          </div> 
+        </div>
+        <input type="submit" value="Add to cart" class="cta" />
       </form>
     </div>
-
   </div>
 </section>

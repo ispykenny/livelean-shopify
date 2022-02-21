@@ -12,7 +12,6 @@ const setBackgroundImages = () => {
     element.forEach(backgroundElement => {
       if(!backgroundElement.isIntersecting) return;
       if(backgroundElement.intersectionRatio > 0) {
-        console.log('hi')
         const img = new Image();
         img.src = backgroundElement.target.getAttribute('data-bg');
 

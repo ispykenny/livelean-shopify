@@ -1,0 +1,31 @@
+
+<div class="inner">
+  <div class="empty_cart_state__copy">
+    <h1>{{section.settings.empty_title}}</h1>
+    <p>{{section.settings.empty_text}}</p>
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Empty State",
+  "tag": "section",
+  "class": "empty_cart_state",
+  "settings": [
+    {
+      "type": "text",
+      "id": "empty_title",
+      "label": "Hero Title",
+      "default": "No items in your cart"
+    },
+    {
+      "type": "text",
+      "id": "empty_text",
+      "label": "Hero Text",
+      "default": "Lets fix that!"
+    }
+  ]
+}
+{% endschema %}

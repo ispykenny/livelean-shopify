@@ -1,0 +1,8 @@
+main img {
+  opacity: 0;
+}
+
+main .active img {
+  opacity: 1;
+  transition: all 600ms ease;
+}

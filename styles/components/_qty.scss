@@ -1,0 +1,86 @@
+.qty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 2em 0;
+}
+
+.qty_num {
+  margin: 0em 1em;
+  display: inline-block;
+}
+
+.qty button {
+  @include kota-reset-button();  
+  background: #eee;
+  height: 50px;
+  width: 50px; 
+  cursor: pointer;
+  position: relative;
+  border-radius: 100%;
+
+  span {
+    position: absolute;
+    top: 50%; left: 50%;  
+    padding: 0; 
+    transform: translate(-50%, -50%);
+
+    svg {
+      width: 100%;
+    }
+  }
+
+  &:active {
+    top:1px
+  }
+}
+
+
+.cart-add-form div {
+  margin-top: 0.4em;
+	border-radius: 20px;
+	align-items: center;
+
+	input {
+		margin-left: 0px;
+	}
+}
+
+.cart-add-form button {
+	@include kota-reset-button();
+	background-color: $green;
+	border-radius: 30px;
+	border: none;
+	box-shadow: 0px 0px 20px rgba($green, 0.2);
+  position: relative;
+	cursor: pointer;
+	padding: 0.3em 2em;
+	color: white;
+
+  &:active {
+    top: 1px;
+  }
+}
+
+.qty-form-tracker {
+	position: relative;
+	top: 2px;
+	display: inline-block;
+}
+
+.cart-add-form span {
+	padding: 0em 0.7em;
+	color: black;
+	font-size: 0.9em;
+	font-weight: bolder;
+}
+
+.qty-btn {
+	padding: 0;
+  svg {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+  }
+}

@@ -7,7 +7,7 @@
         </div>
     {% endif %}
     <img 
-      src="{{product.featured_image | img_url: '300x300', crop: 'center'}}" 
+      data-src="{{product.featured_image | img_url: '300x300', crop: 'center'}}" 
       alt="thumbnail of {{product.title}}"/>
   </a>
   <div class="products__content">
