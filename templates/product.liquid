@@ -14,6 +14,7 @@
     </div>
     <div>
       <p class="product-price">
+        <p>Original Price:  <strike>{{product.compare_at_price | money }}</strike></p>
         Price: {{product.price | money }}
       </p>
       <h1>{{product.title}}</h1>

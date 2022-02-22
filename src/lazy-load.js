@@ -7,7 +7,6 @@ const config  = {
 
 export const lazyLoad = () => {
   let images = document.querySelectorAll('main img')
-  console.log(images)
   let observer = new IntersectionObserver((element) => {
     
     element.forEach(imgEl => {
