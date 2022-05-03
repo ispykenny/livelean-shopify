@@ -1,6 +1,9 @@
+{% capture link %}
+{% if product.metafields.my_fields.external_link %}{{product.metafields.my_fields.external_link}}{% else %}{{product.url}}{% endif %}
+{% endcapture %}
 
 <div class="products__item">
-  <a href="{{product.url}}" class="products__img">
+  <a href="{{link}}" class="products__img" {% if product.metafields.my_fields.external_link %}target="_blank" rel="noopener noreferrer"{% endif %}>
     {% if product.compare_at_price %}
       <div class="sale-banner">
           On Sale!
@@ -21,11 +24,20 @@
             </strike>
           </p>
         {% endif %}
-        <p class="products__price">
-          {{product.price | money}}
-        </p>    
+        {% if product.metafields.my_fields.external_link %}
+          {% else %}
+            <p class="products__price">
+              {{product.price | money}}
+            </p>  
+        {% endif %}  
       </div>
-      <a href="{{product.url}}">View Product</a>
+      <a href="{{link}}"{% if product.metafields.my_fields.external_link %}target="_blank" rel="noopener noreferrer"{% endif %}>
+        {% if product.metafields.my_fields.external_link %}
+          Visit our Partner
+          {% else %}
+          Visit Product
+        {% endif %}
+      </a>
     </div>
   </div>
 </div>

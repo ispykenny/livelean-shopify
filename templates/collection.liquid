@@ -1,12 +1,15 @@
 <section id="products">
   <div class="inner">
     {% comment %} // filter goes here {% endcomment %}
+    {% assign collectionTitle = collection.title | downcase | split: ' ' | join: '' %}
     <div class="products">
       {% for product in collections.all.products %}
+        {% if product.tags contains collectionTitle  %}
           {% 
             render 'product',
             product: product
-          %}
+          %}  
+        {% endif %}
       {% endfor %}
     </div>
   </div>
